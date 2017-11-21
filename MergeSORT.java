@@ -36,15 +36,17 @@ public class MergeSORT {
         int current = 0;
         while(left<=center && mid<=right){
             if(input[left]>input[mid]){
-                tempArray[current++]=input[mid++];
+            	tempArray[current++]=input[mid++];
                 /*
                  * 如果input[left]>input[mid]，那么表明下标为left~center的值都会比input[mid]大;
                  * (5,7,8)(4,9)合并为 3+0+0+0
                  * */               
                 count+=center-left+1;
-            }else{
-                tempArray[current++]=input[left++];
-            }
+                }
+            else
+            	{
+            	tempArray[current++]=input[left++];
+            	}
         }
         //只会执行一个
         while(left<=center){
