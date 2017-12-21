@@ -22,3 +22,8 @@ int main()
 		j++;
 		sort(a+j,a+n);
 		}
+		if(n>0)
+			print("%d\n",sum);
+	}
+	return 0;
+}
